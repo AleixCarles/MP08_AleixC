@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
-        android:text="Temps disponible: %1$d"
+        android:text="@string/timeText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/counterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comptador"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
@@ -32,6 +32,7 @@
         android:id="@+id/tapMeBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
         android:text="@string/touchme"
         android:textColor="#212121"
         app:layout_constraintBottom_toBottomOf="parent"
