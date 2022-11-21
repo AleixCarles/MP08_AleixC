@@ -1,11 +1,10 @@
 package me.aleixcarles.dam.comptador
 
-import android.annotation.SuppressLint
-import android.content.IntentSender.OnFinished
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -46,11 +45,14 @@ class MainActivity : AppCompatActivity() {
         timeTextView = findViewById(R.id.timeTextView)
         counterTextView = findViewById(R.id.counterTextView)
 
-        tapMeBottom.setOnClickListener {
+        tapMeBottom.setOnClickListener { view ->
+            val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+            view.startAnimation(bounceAnimation)
             if (!appStarted){
                 startGame()
 
             }
+
             incrementCounter()
         }
         timeTextView.text = getString(R.string.timeText, time)
@@ -77,8 +79,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun incrementCounter() {
 //        counter = counter+1
+        val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
         counter += 1
         counterTextView.text = counter.toString()
+        counterTextView.startAnimation(blinkAnimation)
     }
     private fun endGame() {
         Toast.makeText(this,getString(R.string.endGame, counter), Toast.LENGTH_LONG).show()
