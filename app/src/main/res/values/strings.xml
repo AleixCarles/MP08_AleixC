@@ -3,4 +3,7 @@
     <string name="touchme">Tocam</string>
     <string name="timeText">Temps disponible: %1$d</string>
     <string name="endGame">Temps acabat! Resultat: %1$d</string>
+    <string name="aboutMenu">About</string>
+    <string name="aboutTitle">Time Fighter%1$s</string>
+    <string name="aboutMessage">"Creat per Aleix Carles. Github: https://github.com/AleixCarles/MP08_AleixC "</string>
 </resources>
